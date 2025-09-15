@@ -1,9 +1,4 @@
 const submit=document.getElementById('submit');
-
-
-
-
-
 async function api(city) {
   cityname.innerHTML=city
   const url =
@@ -25,8 +20,7 @@ async function api(city) {
         humidity.innerHTML = result.humidity;
         min_temp.innerHTML = result.min_temp;
         max_temp.innerHTML = result.max_temp;
-        
-        
+                
 
   } catch (error) {
     console.error(error);
@@ -40,4 +34,5 @@ submit.addEventListener('click',(e)=>{
   console.log(city.value)
   api(city.value);
   cityname.innerHTML=city.value;
+
 })
